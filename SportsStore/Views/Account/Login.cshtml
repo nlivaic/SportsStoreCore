@@ -1,0 +1,25 @@
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Log In";
+    Layout = "_AdminLayout";
+}
+
+<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-text"></div>
+            <form method="post" asp-action="Login">
+                <div class="form-group">
+                    <label for="Name">Name:</label>
+                    <div><span class="text-danger" asp-validation-for="Name"></span></div>
+                    <input class="form-control" asp-for="Name">
+                    <label for="Password">Password:</label>
+                    <div><span class="text-danger" asp-validation-for="Password"></span></div>
+                    <input class="form-control" asp-for="Password">
+                </div>
+                <button class="btn btn-primary">Log In</button>
+            </form>
+    </div>
+</div>
